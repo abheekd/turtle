@@ -1,6 +1,6 @@
 import { withStyles } from '@material-ui/core/styles';
 
-const drawerWidth = 240;
+const drawerWidth = 200;
 const styles = withStyles(theme => ({
     root: {
       flexGrow: 1,
@@ -60,7 +60,8 @@ const styles = withStyles(theme => ({
     },
     content: {
       flexGrow: 1,
-      maxWidth: 850
+      maxWidth: 1400,
+      paddingTop: 20
     },
     title: {
       flexGrow: 1,

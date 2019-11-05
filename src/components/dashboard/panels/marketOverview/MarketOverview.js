@@ -1,13 +1,33 @@
 import React from 'react';
-import { VictoryChart, VictoryLine, VictoryTheme } from 'victory';
+import Grid from '@material-ui/core/Grid';
+import Divider from '@material-ui/core/Divider';
 import Typography from '@material-ui/core/Typography';
+import { VictoryChart, VictoryLine, VictoryLegend, VictoryTheme } from 'victory';
+
+import TrendingUpIcon from '@material-ui/icons/TrendingUp';
 
 function MarketOverview(props) {
   return (
     <div>
-      <Typography color="textPrimary">Market Overview</Typography>
-      <svg height={400} width={400}>
-        <VictoryChart theme={VictoryTheme.material} standalone={false} height={400} width={400}>
+      <Grid container justify="flex-start" alignItems="center" >
+        <TrendingUpIcon />
+        <Typography color="textPrimary">Market Overview</Typography>
+      </Grid>
+      <Divider />
+
+      <svg height={300} width={600} >
+        <VictoryChart
+          theme={VictoryTheme.grayscale}
+          standalone={false}
+          height={300}
+          width={600} >
+          <VictoryLegend
+            orientation="horizontal"
+            theme={VictoryTheme.grayscale}
+            data={[
+              { name: "One", symbol: { type: "square" } }
+            ]}
+          />
           <VictoryLine
             data={[
               { x: 1, y: 2 },

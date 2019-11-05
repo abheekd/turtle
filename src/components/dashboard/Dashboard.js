@@ -3,7 +3,7 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 
 import MarketOverview from './panels/marketOverview/MarketOverview';
-import PositionSummary from './panels/positionSummary/PositionSummary';
+import EquitySummary from './panels/equitySummary/EquitySummary';
 import SectorAllocations from './panels/sectorAllocations/SectorAllocations';
 import PAndLBySector from './panels/pAndLBySector/PAndLBySector';
 import DashboardStyles from './DashboardStyles';
@@ -17,7 +17,7 @@ function Dashboard(props) {
           <MarketOverview />
         </Grid>
         <Grid item xs>
-          <PositionSummary />
+          <EquitySummary />
         </Grid>
       </Grid>
       <Grid container justify="center" alignItems="center" spacing={gridSpacing}>

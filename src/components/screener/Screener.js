@@ -4,7 +4,7 @@ function Screener (props) {
 
     return (
         <div>
-            
+            Screener
         </div>
     );
 }

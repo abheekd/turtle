@@ -1,5 +1,12 @@
 import React from 'react';
 import clsx from 'clsx';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 import { useTheme } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import AppBar from '@material-ui/core/AppBar';
@@ -8,7 +15,6 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
-import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -59,9 +65,6 @@ function App (props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
-            Mini variant drawer
-          </Typography>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -85,24 +88,24 @@ function App (props) {
         </div>
         <Divider />
         <List>
-            <ListItem button key='Dashboard'>
-                <ListItemIcon ><DashboardIcon /></ListItemIcon>
+            <ListItem button key='Dashboard' >
+                <ListItemIcon ><DashboardIcon color="disabled" /></ListItemIcon>
                 <ListItemText primary='Dashboard' />
             </ListItem>
-            <ListItem button key='Position'>
-                <ListItemIcon ><RoomIcon /></ListItemIcon>
+            <ListItem button key='Position' >
+                <ListItemIcon ><RoomIcon color="action" /></ListItemIcon>
                 <ListItemText primary='Position' />
             </ListItem>
-            <ListItem button key='Analyze'>
-                <ListItemIcon><AssessmentIcon /></ListItemIcon>
-                <ListItemText primary='Analyze' />
-            </ListItem>
             <ListItem button key='Trade'>
-                <ListItemIcon><TuneIcon /></ListItemIcon>
+                <ListItemIcon><TuneIcon color="action" /></ListItemIcon>
                 <ListItemText primary='Trade' />
             </ListItem>
+            <ListItem button key='Analyze'>
+                <ListItemIcon><AssessmentIcon color="action" /></ListItemIcon>
+                <ListItemText primary='Analyze' />
+            </ListItem>
             <ListItem button key='Screener'>
-                <ListItemIcon><SearchIcon /></ListItemIcon>
+                <ListItemIcon><SearchIcon color="primary" /></ListItemIcon>
                 <ListItemText primary='Screener' />
             </ListItem>
         </List>

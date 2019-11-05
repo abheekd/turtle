@@ -4,7 +4,7 @@ function Analyze (props) {
 
     return (
         <div>
-            
+            Analyze
         </div>
     );
 }

@@ -4,7 +4,7 @@ function Trade (props) {
 
     return (
         <div>
-            
+            Trade
         </div>
     );
 }
